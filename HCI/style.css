@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  width: 95%;
+  max-width: 480px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 12px;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+#qrcode {
+  margin: 20px auto;
+  padding: 15px;
+  border: 3px solid #333;   /* Clear dark border */
+  border-radius: 10px;
+  background: #fff;         /* White background for contrast */
+  display: inline-block;
+}
+
+.qr-label {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #444;
+  font-style: italic;
+}
+
+.emergency-title {
+  color: white;
+  background-color: red;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 15px 0;
+  font-size: 1rem;
+}
+
+#qrSection {
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(255,0,0,0.2);
+  margin-top: 20px;
+}
+
+/* Responsive design for phones */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  input, button {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+  #qrcode {
+    width: auto;
+    max-width: 90%;
+  }
+}

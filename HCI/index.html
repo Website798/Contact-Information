@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emergency Information</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="app">
+    <!-- Personal Information -->
+    <div id="infoForm">
+      <h2>Personal Information</h2>
+      <input type="text" id="fullname" placeholder="Full Name" required>
+      <input type="text" id="address" placeholder="Address" required>
+      <input type="text" id="age" placeholder="Age" required>
+
+      <!-- Emergency Contact Section -->
+      <h2 class="emergency-title">Emergency Contact Information</h2>
+      <input type="text" id="guardian" placeholder="Father / Mother / Guardian Name" required>
+      <input type="text" id="contactAddress" placeholder="Guardian Address" required>
+      <input type="text" id="phone" placeholder="Guardian Phone Number" required>
+      <input type="text" id="facebook" placeholder="Facebook (optional)">
+      
+      <button onclick="generateQR()">Generate QR Code</button>
+    </div>
+
+    <!-- QR Code Display -->
+    <div id="qrSection" style="display:none;">
+      <h2 class="emergency-title">FOR EMERGENCY USE</h2>
+      <div id="qrcode"></div>
+      <p class="qr-label">Scan for Emergency Info</p>
+      <button onclick="downloadQR()">Download QR Code</button>
+    </div>
+  </div>
+
+  <!-- QR Code Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
