@@ -7,33 +7,42 @@
 </head>
 <body>
   <div class="container" id="app">
-    <!-- Personal Information -->
     <div id="infoForm">
       <h2>Personal Information</h2>
       <input type="text" id="fullname" placeholder="Full Name" required>
       <input type="text" id="address" placeholder="Address" required>
       <input type="text" id="age" placeholder="Age" required>
 
-      <!-- Emergency Contact Section -->
-      <h2 class="emergency-title">Emergency Contact Information</h2>
-      <input type="text" id="guardian" placeholder="Father / Mother / Guardian Name" required>
-      <input type="text" id="contactAddress" placeholder="Guardian Address" required>
-      <input type="text" id="phone" placeholder="Guardian Phone Number" required>
-      <input type="text" id="facebook" placeholder="Facebook (optional)">
-      
+      <h2 class="emergency-title">Guardian Information</h2>
+      <input type="text" id="guardianName" placeholder="Guardian Name" required>
+      <input type="text" id="guardianAddress" placeholder="Guardian Address" required>
+      <input type="text" id="guardianPhone" placeholder="Guardian Phone Number" required>
+      <input type="text" id="guardianFacebook" placeholder="Guardian Facebook">
+
+      <h2 class="emergency-title">Mother Information</h2>
+      <input type="text" id="motherName" placeholder="Mother Name">
+      <input type="text" id="motherAddress" placeholder="Mother Address">
+      <input type="text" id="motherPhone" placeholder="Mother Phone Number">
+      <input type="text" id="motherFacebook" placeholder="Mother Facebook">
+
+      <h2 class="emergency-title">Father Information</h2>
+      <input type="text" id="fatherName" placeholder="Father Name">
+      <input type="text" id="fatherAddress" placeholder="Father Address">
+      <input type="text" id="fatherPhone" placeholder="Father Phone Number">
+      <input type="text" id="fatherFacebook" placeholder="Father Facebook">
+
       <button onclick="generateQR()">Generate QR Code</button>
     </div>
 
-    <!-- QR Code Display -->
     <div id="qrSection" style="display:none;">
       <h2 class="emergency-title">FOR EMERGENCY USE</h2>
       <div id="qrcode"></div>
       <p class="qr-label">Scan for Emergency Info</p>
       <button onclick="downloadQR()">Download QR Code</button>
+      <button onclick="goBack()">Edit Information</button>
     </div>
   </div>
 
-  <!-- QR Code Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script src="script.js"></script>
 </body>
