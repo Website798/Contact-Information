@@ -1,64 +1,108 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f4f6f9;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 700px;
-  margin: auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-h2 {
-  border-bottom: 2px solid #0077cc;
-  padding-bottom: 5px;
-  color: #0077cc;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-button {
-  background: #0077cc;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  margin-top: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #005fa3;
-}
-
-.contact-block {
-  margin-bottom: 15px;
-}
-
-#qrcode {
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 25px;        /* GAP around QR code */
-  background: #ffffff;  /* White background for contrast */
-  border: 3px solid #000; /* Black border */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  width: fit-content;
-  margin: 20px auto;
+  min-height: 100vh;
+  margin: 0;
 }
 
-#qrcode canvas {
-  border-radius: 4px; /* subtle rounded edges */
+.container {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  width: 95%;
+  max-width: 480px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 12px;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+#qrcode {
+  margin: 20px auto;
+  padding: 15px;
+  border: 3px solid #333;  
+  border-radius: 10px;
+  background: #fff;         
+  display: inline-block;
+}
+
+.qr-label {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #444;
+  font-style: italic;
+}
+
+.emergency-title {
+  color: white;
+  background-color: red;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 15px 0;
+  font-size: 1rem;
+}
+
+#qrSection {
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(255,0,0,0.2);
+  margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  input, button {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+  #qrcode {
+    width: auto;
+    max-width: 90%;
+  }
 }
